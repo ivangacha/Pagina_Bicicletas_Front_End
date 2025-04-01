@@ -1,5 +1,115 @@
 /*Estilos para la pagina de Contactanos*/
 
+/*Diseño responsivo*/
+
+/* Para pantallas grandes (escritorios) */
+@media screen and (min-width: 1024px) {
+    .caja_header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contacto {
+        flex-direction: row;
+    }
+
+    .footer_contenido {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap; /* Mantén las secciones en una sola fila */
+    }
+}
+
+/* Para tablets (pantallas medianas) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    .imagen_mantenimiento {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    nav ul li a {
+        font-size: 14px; /* Reducimos el tamaño del texto */
+        padding: 8px 15px; /* Ajustamos el espacio interior */
+        word-wrap: break-word; /* Permitimos que las palabras largas se dividan */
+    }
+
+    nav ul {
+        gap: 10px; /* Reducimos el espaciado entre los elementos del menú */
+    }
+}
+
+@media screen and (max-width: 820px) {
+    nav ul li:nth-child(4) a::after {
+        content: "Manten."; /* Texto abreviado para "Agenda Mantenimientos" */
+    }
+
+    nav ul li:nth-child(5) a::after {
+        content: "Principal"; /* Texto abreviado para "Página Principal" */
+    }
+
+    nav ul li a {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
+    }
+}
+
+/* Para móviles (pantallas pequeñas) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /*cambia a disposicion vertical*/
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espaciado vertical entre los elementos */
+    }
+
+    nav ul li a {
+        width: 100%; /* Para que ocupen todo el ancho disponible */
+        text-align: center;
+    }
+
+    .caja_header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .imagen_mantenimiento {
+        display: none; /* Ocultamos la imagen si no cabe bien */
+    }
+
+    .footer_contenido {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra el contenido */
+        text-align: center;
+    }
+
+    .footer_seccion {
+        margin-bottom: 20px; /* Espaciado entre secciones */
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -38,10 +148,11 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px; /*espaciado entre los elementos*/
 }
 
 nav ul li {
-    margin: 0 100px;
+    margin: 0;
 }
 
 nav ul li a {

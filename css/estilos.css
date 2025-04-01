@@ -1,0 +1,134 @@
+/*Estilos para la pagina de Contactanos*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Seccion header*/
+
+header {
+    padding: 40px;
+    text-align: center;
+}
+
+#imagen_logo {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.caja_header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*Seccion menu*/
+
+nav {
+    background-color: #d4a017;
+    padding: 40px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+/*Seccion formulario e imagen*/
+
+h2 {
+    padding: 40px;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;;
+}
+
+form input, form textarea {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.imagen_mantenimiento {
+    width: 50%;
+}
+
+/*Seccion footer*/
+
+footer {
+    background-color: #d4a017;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer_contenido {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.footer_seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_seccion ul li i {
+    color: black;
+    display: inline-block;
+}
+
+.footer_seccion ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer_seccion ul li a:hover {
+    color: white;
+}

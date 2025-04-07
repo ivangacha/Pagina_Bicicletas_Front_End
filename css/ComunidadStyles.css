@@ -196,4 +196,15 @@
       .footer-text {
         font-size: 16px;
         color: #1e1e1e;
+        text-decoration: none;      
+      }
+
+      .footer-text-paginas {
+        font-size: 16px;
+        color: #1e1e1e;
+        text-decoration: none;      
+      }
+
+      .footer-text-paginas:hover {
+        color: white;
       }

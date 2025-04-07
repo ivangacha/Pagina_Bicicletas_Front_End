@@ -375,6 +375,15 @@ body {
   text-decoration: none;
 }
 
+.footer-item-paginas a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.footer-item-paginas a:hover {
+  color: white
+}
+
 /* Specific footer section styles to match original design */
 .explore-section .footer-title {
   white-space: nowrap;

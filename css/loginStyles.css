@@ -1,0 +1,265 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.registro {
+    background-color: #fff;
+    width: 100%;
+    padding-top: 69px;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .registro {
+        max-width: 100%;
+    }
+}
+
+/* Navigation */
+.navigation {
+    background-color: #fff;
+    display: flex;
+    padding: 48px 70px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: end;
+    font-weight: 500;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .navigation {
+        padding: 48px 20px;
+    }
+}
+
+.nav-container {
+    display: flex;
+    width: 736px;
+    max-width: 100%;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bicycle-self-service {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    color: #fff;
+    justify-content: end;
+}
+
+.nav-button {
+    border-radius: 8px;
+    background-color: #000;
+    padding: 14px 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .nav-button {
+        padding: 14px 20px;
+    }
+}
+
+/* Main content */
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 32px;
+    color: #000;
+    font-weight: 800;
+}
+
+@media (max-width: 991px) {
+    .login-content {
+        padding: 0 16px;
+    }
+}
+
+
+.logo-image {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.login-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+/* Form */
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-label {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.input-icon {
+    width: 28px;
+}
+
+
+.form-input {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 14px 16px;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .form-input {
+        font-size: 16px;
+    }
+}
+
+.login-btn {
+    align-self: center;
+    margin-top: 32px;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+}
+
+@media (max-width: 991px) {
+    .login-btn {
+        padding: 10px 20px;
+    }
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.register-link a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #e8b931;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 32px;
+    margin-top: 80px;
+}
+
+@media (max-width: 991px) {
+    .footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 20px;
+        margin-top: 40px;
+    }
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-item {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+.footer-item a,
+.footer-item-paginas a {
+    color: #1e1e1e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-item-paginas a:hover {
+    color: white;
+}
+
+/* Footer sections */
+.social-section,
+.about-section,
+.explore-section,
+.contact-section {
+    min-width: 240px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-icon {
+    width: 24px;
+}

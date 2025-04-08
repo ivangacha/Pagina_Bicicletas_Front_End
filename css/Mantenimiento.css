@@ -1,0 +1,56 @@
+.year-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.calendar {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+}
+.calendar h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.day-name {
+    font-weight: bold;
+    background-color: #eee;
+    padding: 5px;
+    text-align: center;
+}
+.day {
+    padding: 7px;
+    background-color: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.day:hover {
+    background-color: #cce5ff;
+}
+.selected {
+    background-color: #007bff !important;
+    color: white;
+}
+
+.agendar-btn {
+    display: block;
+    margin: 10px auto 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.agendar-btn:hover {
+    background-color: #218838;
+}

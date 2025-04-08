@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad - Bicycle Self Service</title>
+    <link rel="stylesheet" href="css/ComunidadStyles.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/Mantenimiento.css" />
+</head>
+<body>
+<header class="site-header">
+    <div class="logo-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f054fad701db4f5054a40631584b6f2df1a7ca54" alt="Bicycle logo" class="site-logo" />
+        <h1 class="site-title">Bicycle Self Service</h1>
+    </div>
+</header>
+
+<nav class="main-navigation">
+    <ul class="nav-links">
+        <li class="nav-item"><a href="educacion.html">Educacion</a></li>
+        <li class="nav-item"><a href="noticias.html">Noticias</a></li>
+        <li class="nav-item"><a href="comunidad.html">Comunidad</a></li>
+        <li class="nav-item"><a href="#">Agenda Mantenimientos</a></li>
+        <li class="nav-item"><a href="contactanos.html">Contactanos</a></li>
+    </ul>
+</nav>
+
+<main class="main-content">
+
+    <h1 class="page-title">Mantenimiento</h1>
+
+    <button class="agendar-btn" onclick="agendarFecha()">Agendar</button>
+
+    <div class="year-container" id="yearContainer">
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bbb6d8ca4d0facbcc42a05bc7015be27b43656c" alt="X Logo" class="social-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5c05e310c1f4cd416b8a4ca7b790560c4f8d3d1d" alt="Instagram Logo" class="social-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c02d7fcb7b46f5103f770c36fb083d7322fb4724" alt="YouTube Logo" class="social-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b11fe628ee0c1bb0f55fc59d46182f54f79cbba" alt="LinkedIn Logo" class="social-icon" />
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Acerca de nosotros</h3>
+            <p class="footer-text">Politecnico Grancolombiano</p>
+            <p class="footer-text">Bogota, Colombia</p>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Explora</h3>
+            <a class="footer-text-paginas" href="#">Pagina Principal</a>
+            <a class="footer-text-paginas" href="#">Educacion</a>
+            <a class="footer-text-paginas" href="noticias.html">Noticias</a>
+            <a class="footer-text-paginas" href="#">Comunidad</a>
+            <a class="footer-text-paginas" href="#">Agenda Mantenimientos</a>
+            <a class="footer-text-paginas" href="contactanos.html">Contactanos</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Informacion de contacto</h3>
+            <p class="footer-text">Linea de Servicio Bogota</p>
+            <p class="footer-text">(601) 744 07 40</p>
+            <p class="footer-text">Linea Gratuita</p>
+            <p class="footer-text">01 8000 180 779</p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const yearContainer = document.getElementById('yearContainer');
+    const dayNames = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+    const months = [...Array(12).keys()].map(m => new Date(0, m).toLocaleString('es-ES', { month: 'long' }));
+    const currentYear = new Date().getFullYear();
+    let selectedDate = null;
+
+    function createCalendar(monthIndex) {
+        const calendarDiv = document.createElement('div');
+        calendarDiv.className = 'calendar';
+
+        const title = document.createElement('h3');
+        title.textContent = `${months[monthIndex]} ${currentYear}`;
+        calendarDiv.appendChild(title);
+
+        const grid = document.createElement('div');
+        grid.className = 'calendar-grid';
+
+        // Nombres de los días
+        dayNames.forEach(day => {
+            const dayEl = document.createElement('div');
+            dayEl.className = 'day-name';
+            dayEl.textContent = day;
+            grid.appendChild(dayEl);
+        });
+
+        const firstDay = new Date(currentYear, monthIndex, 1).getDay();
+        const lastDate = new Date(currentYear, monthIndex + 1, 0).getDate();
+
+        for (let i = 0; i < firstDay; i++) {
+            grid.appendChild(document.createElement('div'));
+        }
+
+        for (let day = 1; day <= lastDate; day++) {
+            const dayEl = document.createElement('div');
+            dayEl.className = 'day';
+            dayEl.textContent = day;
+
+            const thisDate = new Date(currentYear, monthIndex, day);
+            dayEl.onclick = () => {
+                selectedDate = thisDate;
+                document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
+                dayEl.classList.add('selected');
+            };
+
+            grid.appendChild(dayEl);
+        }
+
+        calendarDiv.appendChild(grid);
+        yearContainer.appendChild(calendarDiv);
+    }
+
+    for (let i = 0; i < 12; i++) {
+        createCalendar(i);
+    }
+</script>
+</body>
+</html>

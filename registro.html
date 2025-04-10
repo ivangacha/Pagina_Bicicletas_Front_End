@@ -22,7 +22,7 @@
 
         <h1 class="registration-title">Registro de usuario</h1>
 
-        <form class="registration-form">
+        <form class="registration-form" id="form-registro">
           <label for="email" class="form-label">Correo Electronico:</label>
           <div class="input-container">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/002d561e5e9b06f29f4e8059cf54fc766e4939fd?placeholderIfAbsent=true&apiKey=708ec8f95f1a41f5887ec167886aeb18" alt="Email icon" class="input-icon" />
@@ -31,6 +31,7 @@
               id="email"
               class="form-input"
               placeholder="Ingrese su correo electronico"
+              required
             />
           </div>
 
@@ -42,6 +43,7 @@
               id="username"
               class="form-input"
               placeholder="Ingrese su usuario"
+              required
             />
           </div>
 
@@ -53,6 +55,7 @@
               id="password"
               class="form-input"
               placeholder="Ingrese su contraseña"
+              required
             />
           </div>
 
@@ -110,5 +113,6 @@
         </section>
       </footer>
     </div>
+    <script src="js/registro.js"></script>
   </body>
 </html>
